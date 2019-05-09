@@ -31,20 +31,8 @@ ActiveRecord::Schema.define(version: 2019_05_07_134730) do
     t.string "name"
   end
 
-  create_table "projects_roles", id: false, force: :cascade do |t|
-    t.bigint "project_id", null: false
-    t.bigint "role_id", null: false
-    t.index ["project_id", "role_id"], name: "index_projects_roles_on_project_id_and_role_id"
-  end
-
   create_table "roles", force: :cascade do |t|
     t.string "name"
-  end
-
-  create_table "roles_users", id: false, force: :cascade do |t|
-    t.bigint "role_id", null: false
-    t.bigint "user_id", null: false
-    t.index ["role_id", "user_id"], name: "index_roles_users_on_role_id_and_user_id"
   end
 
   create_table "templates", force: :cascade do |t|
@@ -55,8 +43,18 @@ ActiveRecord::Schema.define(version: 2019_05_07_134730) do
     t.index ["role_id"], name: "index_templates_on_role_id"
   end
 
+  create_table "user_roles", force: :cascade do |t|
+    t.bigint "project_id"
+    t.bigint "role_id"
+    t.bigint "user_id"
+    t.index ["project_id"], name: "index_user_roles_on_project_id"
+    t.index ["role_id"], name: "index_user_roles_on_role_id"
+    t.index ["user_id"], name: "index_user_roles_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
+    t.string "name"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

@@ -1,0 +1,27 @@
+en:
+  active_interaction:
+    errors:
+      messages:
+        invalid_nested: "%{attribute} has an invalid nested value (%{name} => %{value})"
+        invalid_type: "%{attribute} is not a valid type"
+        missing: "%{attribute} is required"
+        invalid: "your %{attribute} is invalid"
+        taken: "%{attribute} `%{value}` is already taken"
+        blank: "%{attribute} can't be blank"
+        improbable_phone: "your %{attribute} is an invalid number"
+        too_long:
+          one: "%{attribute} is too long (maximum is 1 character)"
+          other: "%{attribute} is too long (maximum is %{count} characters)"
+        too_short:
+          one: "%{attribute} is too short (minimum is 1 character)"
+          other: "%{attribute} is too short (minimum is %{count} characters)"
+        wrong_length:
+          one: "%{attribute} is the wrong length (should be 1 character)"
+          other: "%{attribute} is the wrong length (should be %{count} characters)"
+      models:
+        users/remove:
+          attributes:
+            project_id:
+              invalid: "User doesn't have this project"
+            role_id:
+              invalid: "User doesn't have this project role"

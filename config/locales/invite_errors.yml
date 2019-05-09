@@ -1,0 +1,3 @@
+en:
+  errors:
+    role_present?: role not found

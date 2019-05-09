@@ -7,11 +7,19 @@ gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'dry-validation'
-gem 'trailblazer-rails'
 
+# TRB
+gem 'dry-validation'
+gem 'trailblazer', '~> 2.0.4'
+gem 'trailblazer-rails', '~> 1.0.3'
+gem 'reform'
+gem 'reform-rails'
+
+# devise
 gem 'devise'
 gem 'devise_invitable', '~> 2.0.0'
+
+gem 'active_interaction', '~> 3.6' # lite version of TRB operation
 
 group :development, :test do
   gem 'faker'

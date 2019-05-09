@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* app/operations - TRB way to handle business logic
 
-Things you may want to cover:
+* app/interactions - my way to handle business logic, interaction - it's a lite way of TRB operations
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* index.js - javascript test task
