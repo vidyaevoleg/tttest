@@ -1,3 +1,5 @@
 en:
   errors:
-    role_present?: role not found
+    project_present?: 'Project not found'
+    role_present?: 'Role not found'
+    location_present?: "Specified project doesn't have this location"

@@ -73,7 +73,7 @@ RSpec.describe UsersController, type: :request do
             name: 'Alex',
             role_id: 11111,
             project_id: 11111,
-            location_id: 11111,
+            location_id: location.id,
           } }
         end
 
@@ -81,7 +81,7 @@ RSpec.describe UsersController, type: :request do
 
         it 'should provide following errors' do
           subject
-          [:location, :role, :project].each do |attr|
+          [:role_id, :project_id].each do |attr|
             expect(json[:errors][attr].present?).to eq(true)
           end
         end

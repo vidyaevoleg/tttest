@@ -16,7 +16,7 @@ RSpec.describe UsersController, type: :request do
       subject do
         post "/users/#{user.id}/remove", params: { user: {
           project_id: project.id,
-          role_id: role.id
+          role_id: role.id,
         } }
       end
 
